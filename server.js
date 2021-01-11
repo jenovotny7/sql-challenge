@@ -31,7 +31,7 @@ async function optionPrompt() {
 }
 
 
-// view functions
+// These are the view functions
 async function viewEmployees() {
     const res = await db.viewAllEmployees();
     console.table("", res);
@@ -51,7 +51,7 @@ async function viewJobs() {
 };
 
 
-// The following are functions to add data
+//  Fucntion to add employees 
 async function addEmployee() {
     const jobs = await db.findJobs();
   
@@ -112,6 +112,7 @@ async function addEmployee() {
     optionPrompt();
 };
   
+//Function to add departments
 async function addDepartment() {
     const answer = await inquirer.prompt({
       name: "department",
@@ -125,6 +126,7 @@ async function addDepartment() {
     optionPrompt();
 }
 
+// Function to add jobs to database
 async function addJob() {
 
   const department = await db.viewAllDepartments();
@@ -161,6 +163,8 @@ async function addJob() {
     optionPrompt();
 
 }
+
+// Function to update jobs
 async function updateJob() {
     const employees = await db.findEmployee();
   

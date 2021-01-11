@@ -1,5 +1,7 @@
 "use strict";
 
+// Inquirer Prompt
+
 module.exports = {
     choice: [{
         type:'list',
