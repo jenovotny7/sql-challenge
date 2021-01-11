@@ -1,8 +1,8 @@
 # Unit 12 MySQL Homework: Employee Tracker
 
-
-# Readme
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jenovotny7)
+
+
 ## Description
 ​
 This project is to create, store, and edit backend data locally via MySQL software. The title of the project is called Employee Tracker. 
