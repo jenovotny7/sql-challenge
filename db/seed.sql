@@ -11,9 +11,8 @@ VALUES
 INSERT INTO job
     (title, salary, department_id)
 VALUES
-    ('Actor Lead', 1000000, 1),
     ('Actor', 90000, 1),
-    ('Lead Writer', 154000, 2),
+    ('Writer', 154000, 2),
     ('Producer', 161000, 3),
     ('Cameraman', 127000, 3);
     

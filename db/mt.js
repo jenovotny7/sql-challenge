@@ -1,4 +1,4 @@
-2
+
 const connection = require ('./connection');
 
 class DB {
@@ -12,7 +12,7 @@ class DB {
             `SELECT employee.id, employee.first_name, employee.last_name, job.title, department.name AS department, job.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager
             FROM employee
             LEFT JOIN job
-            ON employee.job_id = role.id
+            ON employee.job_id = job.id
             LEFT JOIN department 
             ON job.department_id = department.id 
             LEFT JOIN employee manager 
@@ -51,7 +51,7 @@ class DB {
         });
     };
 
-    addRole(job, salary, department) {
+    addJob(job, salary, department) {
         return this.connection.query("INSERT INTO job SET ?", {
           title: job,
           salary: salary,

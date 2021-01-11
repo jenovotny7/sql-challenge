@@ -4,7 +4,7 @@ module.exports = {
     choice: [{
         type:'list',
         name:'choice',
-        message:'What would you like to do?',
+        message:'Please choose an option',
         choices: [
         {
             name:'View employees',

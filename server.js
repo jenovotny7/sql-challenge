@@ -8,9 +8,12 @@ const db = require ("./db/mt");
 
 
 function init(){
-    console.log("Welcome to Employee Manager!")
+    console.log("Employee Manager!")
     optionPrompt();
 }
+
+
+
 async function optionPrompt() {
     const answer = await inquirer.prompt(prompt.choice)
 
@@ -46,7 +49,9 @@ async function viewJobs() {
     console.table("", res);
     optionPrompt();
 };
-// Add functions
+
+
+// The following are functions to add data
 async function addEmployee() {
     const jobs = await db.findJobs();
   
@@ -82,7 +87,7 @@ async function addEmployee() {
       {
         name: "manager",
         type: "list",
-        message: "Employee's their manager's name?",
+        message: "Employee's manager's name?",
         choices: employeeList
       }
     ]);
@@ -111,12 +116,12 @@ async function addDepartment() {
     const answer = await inquirer.prompt({
       name: "department",
       type: "input",
-      message: "What department would you like to add?"
+      message: "Which deparment would you like to add to our company?"
     });
   
     const res = await db.addDepartment(answer.department);
   
-    console.log(`Added ${answer.department} to the the database.`);
+    console.log(`Is added ${answer.department} to the the database.`);
     optionPrompt();
 }
 
@@ -133,14 +138,14 @@ async function addJob() {
       {
         name: "job",
         type: "input",
-        message: "What job would you like to add?"
+        message: "What job do you want to add?"
       },
 
 
       {
         name: "salary",
         type: "input",
-        message: "What is the salary for that job?"
+        message: "The salary for that job?"
       },
 
       {
@@ -152,7 +157,7 @@ async function addJob() {
     ]);
   
     const res = await db.addJob(answer.job, answer.salary, answer.department_id,);
-    console.log(`Added ${answer.job} to the the database.`);
+    console.log(`You added ${answer.job} to the the database.`);
     optionPrompt();
 
 }
@@ -199,7 +204,7 @@ async function updateJob() {
     await db.updateEmployeeJob(jobId, employeeId);
   
     console.log(
-      `Updated ${answer.name}'s job in the database.`
+      ` ${answer.name} Is updated in the database.`
     );
     optionPrompt();
 };
