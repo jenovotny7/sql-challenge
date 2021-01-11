@@ -43,7 +43,7 @@ This project is licensed under the MIT license.
   
 ## Contributing
 ​
-[me]('https://github.com/me') 
+https://github.com/jenovotny7
 
 ​
 ## SCREENCASTIFY LINKS
