@@ -19,7 +19,8 @@ This project is to create, store, and edit backend data locally via MySQL softwa
 * [Tests](#tests) 
  
 * [Questions](#questions) 
- 
+
+​
 
 ## Installation
 ​
@@ -32,17 +33,19 @@ git clone <repo>, then run 'npm install' in the CLI.
 ​
 To create and store data locally through MySQL software.
 
+​
 
 ## License
 ​
 This project is licensed under the MIT license.
-  
+
+ ​
   
 ## Contributing
 ​
 [me]('https://github.com/me') 
 
-
+​
 ## SCREENCASTIFY LINKS
 
 https://drive.google.com/file/d/1AI8lFlIZbzJTQmak5p6hp3P2-EGoViy9/view
